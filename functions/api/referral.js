@@ -82,7 +82,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'AVA HOUSE Referrals <onboarding@resend.dev>',
-        to: ['margswork2214@gmail.com', 'tasigale68@gmail.com'],
+        to: ['margswork2214@gmail.com', 'a4@askyrgrandpa.com'],
         subject: `New Referral: ${data.young_person_name} — ${(data.urgency || 'routine').toUpperCase()}`,
         html: emailHtml,
       }),
