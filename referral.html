@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Referral — AVA HOUSE</title>
+  <meta name="description" content="Refer a young person to AVA House for safe, nurturing support services in Queensland. NDIS, statutory care, and Justice-funded referrals accepted.">
+  <meta name="keywords" content="NDIS referral, youth referral, SIL referral, Queensland, Brisbane, community access, supported independent living">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Make a Referral — AVA HOUSE">
+  <meta property="og:description" content="Refer a young person to AVA House for safe, nurturing support services in Queensland.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.avahouse.com.au/referral.html">
+  <meta property="og:image" content="https://www.avahouse.com.au/public/logo.png">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'forest': '#1A5632',
+            'forest-deep': '#0E3B22',
+            'gold': '#C5A028',
+            'gold-light': '#F5E6B8',
+            'cream': '#FAF8F0',
+            'dark': '#1A1A1A',
+          },
+          fontFamily: {
+            'heading': ['"DM Serif Display"', 'serif'],
+            'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1A1A1A;
+      background-color: #FAF8F0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Serif Display', serif;
+    }
+    .nav-shadow {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s ease;
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="/" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Home</a>
+
+          <!-- About Us Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              About Us
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Our Story</a>
+              <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">The Why</a>
+            </div>
+          </div>
+
+          <a href="our-approach.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Our Approach</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              Services &amp; Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Youth Programs</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Contact Us</a>
+
+          <!-- CTA Button -->
+          <a href="referral.html" class="ml-4 inline-flex items-center px-5 py-2.5 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+            Make a Referral
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <svg id="hamburger-open" class="w-7 h-7 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="hamburger-close" class="w-7 h-7 text-forest hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Home</a>
+
+        <!-- Mobile About Us Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-about">
+            About Us
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-about" class="hidden pl-4 space-y-1">
+            <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Our Story</a>
+            <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">The Why</a>
+          </div>
+        </div>
+
+        <a href="our-approach.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Our Approach</a>
+
+        <!-- Mobile Services Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-services">
+            Services &amp; Programs
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services" class="hidden pl-4 space-y-1">
+            <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Youth Programs</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Contact Us</a>
+
+        <div class="pt-2">
+          <a href="referral.html" class="block text-center px-5 py-3 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors">
+            Make a Referral
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- ============================================ -->
+  <!-- REFERRAL FORM SECTION                        -->
+  <!-- ============================================ -->
+  <section class="py-12 md:py-20 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Page Header -->
+      <div class="text-center mb-10">
+        <h1 class="text-4xl sm:text-5xl font-heading text-forest">Make a Referral</h1>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          Complete the form below to refer a young person to AVA House. Our team will review your referral and contact you within 2 business days.
+        </p>
+      </div>
+
+      <!-- Referral Form -->
+      <form id="referralForm">
+
+        <!-- Section 1: Referrer Information -->
+        <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+          <h2 class="text-xl font-heading text-forest mb-4 pb-2 border-b border-gold-light">Referrer Information</h2>
+
+          <div class="space-y-5">
+            <!-- Full Name -->
+            <div>
+              <label for="referrer_name" class="block text-sm font-semibold text-dark mb-2">Full Name <span class="text-red-500">*</span></label>
+              <input type="text" id="referrer_name" name="referrer_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Organisation -->
+            <div>
+              <label for="referrer_organisation" class="block text-sm font-semibold text-dark mb-2">Organisation</label>
+              <input type="text" id="referrer_organisation" name="referrer_organisation" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Role/Position -->
+            <div>
+              <label for="referrer_role" class="block text-sm font-semibold text-dark mb-2">Role/Position</label>
+              <input type="text" id="referrer_role" name="referrer_role" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="referrer_email" class="block text-sm font-semibold text-dark mb-2">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="referrer_email" name="referrer_email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label for="referrer_phone" class="block text-sm font-semibold text-dark mb-2">Phone <span class="text-red-500">*</span></label>
+              <input type="tel" id="referrer_phone" name="referrer_phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Young Person Details -->
+        <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+          <h2 class="text-xl font-heading text-forest mb-4 pb-2 border-b border-gold-light">Young Person Details</h2>
+
+          <div class="space-y-5">
+            <!-- Full Name -->
+            <div>
+              <label for="young_person_name" class="block text-sm font-semibold text-dark mb-2">Full Name <span class="text-red-500">*</span></label>
+              <input type="text" id="young_person_name" name="young_person_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Age / Date of Birth -->
+            <div>
+              <label for="young_person_age" class="block text-sm font-semibold text-dark mb-2">Age / Date of Birth</label>
+              <input type="text" id="young_person_age" name="young_person_age" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Gender -->
+            <div>
+              <label for="young_person_gender" class="block text-sm font-semibold text-dark mb-2">Gender</label>
+              <select id="young_person_gender" name="young_person_gender" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+                <option value="">Select...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-binary">Non-binary</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <!-- Cultural Background -->
+            <div>
+              <label for="cultural_background" class="block text-sm font-semibold text-dark mb-2">Cultural Background</label>
+              <input type="text" id="cultural_background" name="cultural_background" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- NDIS Number -->
+            <div>
+              <label for="ndis_number" class="block text-sm font-semibold text-dark mb-2">NDIS Number (if applicable)</label>
+              <input type="text" id="ndis_number" name="ndis_number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+            </div>
+
+            <!-- Funding Type -->
+            <div>
+              <label for="funding_type" class="block text-sm font-semibold text-dark mb-2">Funding Type</label>
+              <select id="funding_type" name="funding_type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+                <option value="">Select...</option>
+                <option value="NDIS">NDIS</option>
+                <option value="Statutory Care">Statutory Care</option>
+                <option value="Justice-funded">Justice-funded</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Referral Details -->
+        <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+          <h2 class="text-xl font-heading text-forest mb-4 pb-2 border-b border-gold-light">Referral Details</h2>
+
+          <div class="space-y-5">
+            <!-- Support Type Needed -->
+            <div>
+              <label class="block text-sm font-semibold text-dark mb-2">Support Type Needed</label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="Community Access" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">Community Access</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="Supported Independent Living (SIL)" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">Supported Independent Living (SIL)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="In-Home Support" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">In-Home Support</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="Daily Living & Life Skills" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">Daily Living &amp; Life Skills</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="Youth Programs" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">Youth Programs</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" name="support_type" value="Cultural & Pastoral Care" class="w-5 h-5 text-gold border-gray-300 rounded focus:ring-gold">
+                  <span class="text-dark">Cultural &amp; Pastoral Care</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Current Living Situation -->
+            <div>
+              <label for="current_living_situation" class="block text-sm font-semibold text-dark mb-2">Current Living Situation</label>
+              <textarea id="current_living_situation" name="current_living_situation" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"></textarea>
+            </div>
+
+            <!-- Reason for Referral -->
+            <div>
+              <label for="reason_for_referral" class="block text-sm font-semibold text-dark mb-2">Reason for Referral <span class="text-red-500">*</span></label>
+              <textarea id="reason_for_referral" name="reason_for_referral" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"></textarea>
+            </div>
+
+            <!-- Urgency -->
+            <div>
+              <label class="block text-sm font-semibold text-dark mb-2">Urgency</label>
+              <div class="flex flex-wrap gap-6">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="urgency" value="Routine" class="w-5 h-5 text-gold border-gray-300 focus:ring-gold" checked>
+                  <span class="text-dark">Routine</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="urgency" value="Urgent" class="w-5 h-5 text-gold border-gray-300 focus:ring-gold">
+                  <span class="text-dark">Urgent</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="urgency" value="Crisis" class="w-5 h-5 text-gold border-gray-300 focus:ring-gold">
+                  <span class="text-dark">Crisis</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Additional Information -->
+        <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+          <h2 class="text-xl font-heading text-forest mb-4 pb-2 border-b border-gold-light">Additional Information</h2>
+
+          <div class="space-y-5">
+            <!-- Supporting Documents -->
+            <div>
+              <label for="documents" class="block text-sm font-semibold text-dark mb-2">Supporting Documents</label>
+              <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx,.jpg,.png" multiple class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-gold-light file:text-forest hover:file:bg-gold/20">
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div>
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input type="checkbox" name="consent" required class="w-5 h-5 mt-0.5 text-gold border-gray-300 rounded focus:ring-gold">
+                <span class="text-sm text-dark leading-relaxed">I confirm I have consent to share this information and that the details provided are accurate to the best of my knowledge. <span class="text-red-500">*</span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-gold hover:bg-amber-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors text-lg shadow-sm">
+          Submit Referral
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-forest-deep text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <!-- Left Column -->
+        <div>
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-green-200/80 text-sm mt-4">
+            &copy; 2025 A4 Solutions All rights reserved.
+          </p>
+        </div>
+
+        <!-- Middle Column: Menu Links -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">Our Story</a></li>
+            <li><a href="the-why.html" class="text-green-200/80 hover:text-gold transition-colors">Our Why</a></li>
+            <li><a href="our-approach.html" class="text-green-200/80 hover:text-gold transition-colors">Our Approach</a></li>
+            <li><a href="services.html" class="text-green-200/80 hover:text-gold transition-colors">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Contact Us</h4>
+          <ul class="space-y-2.5">
+            <li><a href="referral.html" class="text-gold hover:text-yellow-300 font-semibold transition-colors">Make a Referral</a></li>
+            <li><a href="contact.html" class="text-green-200/80 hover:text-gold transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-green-200/60">
+        <div class="flex gap-4">
+          <a href="terms.html" class="hover:text-gold transition-colors">Website Terms</a>
+          <span>|</span>
+          <a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        </div>
+        <p>Brisbane, Queensland, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Sticky nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('nav-shadow');
+      } else {
+        navbar.classList.remove('nav-shadow');
+      }
+    });
+
+    // Mobile hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerOpen = document.getElementById('hamburger-open');
+    const hamburgerClose = document.getElementById('hamburger-close');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerOpen.classList.remove('hidden');
+        hamburgerClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerOpen.classList.add('hidden');
+        hamburgerClose.classList.remove('hidden');
+      }
+    });
+
+    // Mobile dropdown accordions
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        const arrow = button.querySelector('svg');
+
+        if (target.classList.contains('hidden')) {
+          target.classList.remove('hidden');
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          target.classList.add('hidden');
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // Form submission handler
+    document.getElementById('referralForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      try {
+        const formData = new FormData(e.target);
+
+        // Collect checkbox values for support_types
+        const supportTypes = [];
+        e.target.querySelectorAll('input[name="support_type"]:checked').forEach(cb => {
+          supportTypes.push(cb.value);
+        });
+
+        const data = {
+          referrer_name: formData.get('referrer_name'),
+          referrer_organisation: formData.get('referrer_organisation'),
+          referrer_role: formData.get('referrer_role'),
+          referrer_email: formData.get('referrer_email'),
+          referrer_phone: formData.get('referrer_phone'),
+          young_person_name: formData.get('young_person_name'),
+          young_person_age: formData.get('young_person_age'),
+          young_person_gender: formData.get('young_person_gender'),
+          cultural_background: formData.get('cultural_background'),
+          ndis_number: formData.get('ndis_number'),
+          funding_type: formData.get('funding_type'),
+          support_types: supportTypes,
+          current_living_situation: formData.get('current_living_situation'),
+          reason_for_referral: formData.get('reason_for_referral'),
+          urgency: formData.get('urgency'),
+          consent_given: formData.get('consent') === 'on',
+        };
+
+        const response = await fetch('/api/referral', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Show success message
+          e.target.innerHTML = `
+            <div class="text-center py-12">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-heading text-forest mb-2">Referral Submitted</h2>
+              <p class="text-gray-600 mb-6">Thank you. Our team will review your referral and get back to you within 2 business days.</p>
+              <a href="/" class="inline-block bg-gold hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition">Back to Home</a>
+            </div>
+          `;
+        } else {
+          throw new Error(result.error || 'Something went wrong');
+        }
+      } catch (error) {
+        alert('Error submitting referral: ' + error.message + '. Please try again or contact us directly.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+
+</body>
+</html>
