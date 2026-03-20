@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Care Model — AVA HOUSE</title>
+  <meta name="description" content="AVA House's holistic care model blends Cultural, Spiritual, Emotional, Practical, and Educational care — nurturing identity, faith, resilience, and independence for young people in Queensland.">
+  <meta name="keywords" content="care model, holistic care, cultural care, spiritual care, emotional care, practical care, educational care, NDIS, youth care, Queensland">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Care Model — AVA HOUSE">
+  <meta property="og:description" content="Our holistic framework blends Cultural, Spiritual, Emotional, Practical, and Educational care for young people.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.avahouse.com.au/our-approach.html">
+  <meta property="og:image" content="https://www.avahouse.com.au/public/logo.png">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'forest': '#1A5632',
+            'forest-deep': '#0E3B22',
+            'gold': '#C5A028',
+            'gold-light': '#F5E6B8',
+            'cream': '#FAF8F0',
+            'dark': '#1A1A1A',
+          },
+          fontFamily: {
+            'heading': ['"DM Serif Display"', 'serif'],
+            'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1A1A1A;
+      background-color: #FAF8F0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Serif Display', serif;
+    }
+    .nav-shadow {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s ease;
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .pillar-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    /* House visual styles */
+    .house-roof {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    @media (max-width: 639px) {
+      .house-roof {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="/" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Home</a>
+
+          <!-- About Us Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              About Us
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Our Story</a>
+              <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">The Why</a>
+            </div>
+          </div>
+
+          <a href="our-approach.html" class="px-4 py-2 text-forest font-semibold border-b-2 border-gold">Our Approach</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              Services &amp; Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Youth Programs</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Contact Us</a>
+
+          <!-- CTA Button -->
+          <a href="referral.html" class="ml-4 inline-flex items-center px-5 py-2.5 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+            Make a Referral
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <svg id="hamburger-open" class="w-7 h-7 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="hamburger-close" class="w-7 h-7 text-forest hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Home</a>
+
+        <!-- Mobile About Us Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-about">
+            About Us
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-about" class="hidden pl-4 space-y-1">
+            <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Our Story</a>
+            <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">The Why</a>
+          </div>
+        </div>
+
+        <a href="our-approach.html" class="block px-4 py-3 text-forest font-semibold bg-cream rounded-lg">Our Approach</a>
+
+        <!-- Mobile Services Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-services">
+            Services &amp; Programs
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services" class="hidden pl-4 space-y-1">
+            <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Youth Programs</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Contact Us</a>
+
+        <div class="pt-2">
+          <a href="referral.html" class="block text-center px-5 py-3 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors">
+            Make a Referral
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- ============================================ -->
+  <!-- INTRO SECTION                                -->
+  <!-- ============================================ -->
+  <section class="bg-cream py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl text-forest leading-tight">Our Care Model</h1>
+      <p class="mt-6 text-lg sm:text-xl text-gray-700 leading-relaxed">
+        At AVA House, our care model is built on the belief that every young person deserves to heal, grow, and thrive in a supportive, culturally grounded environment. Our holistic framework blends Cultural, Spiritual, Emotional, Practical, and Educational care — nurturing identity, faith, resilience, and independence.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5 CARE PILLARS — DETAILED CARDS              -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl text-forest">The Five Pillars of Care</h2>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          Each pillar works together to create a complete care environment — addressing the whole person, not just their immediate needs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Pillar 1: Emotional Care -->
+        <div class="pillar-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8 border-l-4 border-l-rose-500">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-rose-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Emotional Care &amp; Healing through Understanding</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We provide trauma-informed and compassionate care that fosters emotional safety and trust. Through consistent relationships and understanding, young people begin to rebuild confidence and find their voice.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Practical Care -->
+        <div class="pillar-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8 border-l-4 border-l-amber-500">
+          <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Practical Care — Preparing for Independence</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We help young people build everyday life skills, pursue education, and develop the confidence to transition into independent living. This includes hands-on training, mentoring, and lifelong learning opportunities.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Cultural Care -->
+        <div class="pillar-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8 border-l-4 border-l-emerald-500">
+          <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Cultural Care — Strength in Identity</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We reconnect young people with their cultural roots, traditions, and community. By strengthening identity and belonging, we create a sense of pride and connection that supports long-term wellbeing.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Spiritual Care -->
+        <div class="pillar-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8 border-l-4 border-l-purple-500">
+          <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-6-9h12"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Spiritual Care — Guided by Faith and Hope</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Faith-based supports offer a space for reflection, prayer, and connection to ancestral wisdom. We honour diverse spiritual journeys, providing guidance through faith and a sense of purpose for the future.
+          </p>
+        </div>
+
+        <!-- Pillar 5: Educational Care -->
+        <div class="pillar-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8 border-l-4 border-l-blue-500">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Educational Care — Learning for Life</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We believe education is empowerment. Our team supports school engagement, vocational training, and pathways to employment — equipping young people with tools to shape their own future.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- HOUSE VISUAL — CARE MODEL DIAGRAM            -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl text-forest">The AVA House Framework</h2>
+        <p class="mt-4 text-lg text-gray-600">Our care model, visualised as a house — built on education, strengthened by care, sheltered by culture and faith.</p>
+      </div>
+
+      <!-- House Shape -->
+      <div class="max-w-2xl mx-auto">
+
+        <!-- Roof -->
+        <div class="relative">
+          <div class="house-roof bg-gold mx-auto" style="height: 120px; width: 100%;"></div>
+          <div class="absolute inset-0 flex items-end justify-center pb-4 sm:pb-6">
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-8 text-white font-semibold text-sm sm:text-base">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+                </svg>
+                Cultural Care
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-6-9h12"/>
+                </svg>
+                Spiritual Care
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Walls (Middle Section) -->
+        <div class="bg-forest text-white px-6 sm:px-10 py-10 sm:py-14">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+            <!-- Left: Emotional Care -->
+            <div class="text-center">
+              <div class="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-rose-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/>
+                </svg>
+              </div>
+              <p class="font-semibold text-sm sm:text-base">Emotional Care</p>
+            </div>
+
+            <!-- Center: AVA HOUSE tagline -->
+            <div class="text-center py-4 sm:py-0">
+              <div class="border-2 border-gold rounded-xl px-4 py-5">
+                <p class="font-heading text-lg sm:text-xl text-gold">AVA HOUSE</p>
+                <p class="text-xs sm:text-sm text-green-100/80 mt-1 leading-snug">Culturally Grounded<br>to be Future Ready</p>
+              </div>
+            </div>
+
+            <!-- Right: Practical Care -->
+            <div class="text-center">
+              <div class="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+                </svg>
+              </div>
+              <p class="font-semibold text-sm sm:text-base">Practical Care</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foundation -->
+        <div class="bg-emerald-800 text-white px-6 sm:px-10 py-6 sm:py-8 rounded-b-2xl">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-12">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z"/>
+              </svg>
+              <span class="font-semibold text-sm sm:text-base">Educational Care</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+              </svg>
+              <span class="font-semibold text-sm sm:text-base">Practical Care</span>
+            </div>
+          </div>
+          <p class="text-center text-xs sm:text-sm text-green-200/70 mt-3">The foundation upon which independence is built</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA BANNER SECTION                           -->
+  <!-- ============================================ -->
+  <section class="bg-forest py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl text-white">Ready to make a referral?</h2>
+      <p class="mt-4 text-lg text-green-100/90">
+        We're here to support young people on their journey to independence.
+      </p>
+      <div class="mt-8">
+        <a href="referral.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-lg text-lg">
+          Make a Referral
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-forest-deep text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <!-- Left Column -->
+        <div>
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-green-200/80 text-sm mt-4">
+            &copy; 2025 A4 Solutions All rights reserved.
+          </p>
+        </div>
+
+        <!-- Middle Column: Menu Links -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">Our Story</a></li>
+            <li><a href="the-why.html" class="text-green-200/80 hover:text-gold transition-colors">Our Why</a></li>
+            <li><a href="our-approach.html" class="text-green-200/80 hover:text-gold transition-colors">Our Approach</a></li>
+            <li><a href="services.html" class="text-green-200/80 hover:text-gold transition-colors">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Contact Us</h4>
+          <ul class="space-y-2.5">
+            <li><a href="referral.html" class="text-gold hover:text-yellow-300 font-semibold transition-colors">Make a Referral</a></li>
+            <li><a href="contact.html" class="text-green-200/80 hover:text-gold transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-green-200/60">
+        <div class="flex gap-4">
+          <a href="terms.html" class="hover:text-gold transition-colors">Website Terms</a>
+          <span>|</span>
+          <a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        </div>
+        <p>Brisbane, Queensland, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Sticky nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('nav-shadow');
+      } else {
+        navbar.classList.remove('nav-shadow');
+      }
+    });
+
+    // Mobile hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerOpen = document.getElementById('hamburger-open');
+    const hamburgerClose = document.getElementById('hamburger-close');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerOpen.classList.remove('hidden');
+        hamburgerClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerOpen.classList.add('hidden');
+        hamburgerClose.classList.remove('hidden');
+      }
+    });
+
+    // Mobile dropdown accordions
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        const arrow = button.querySelector('svg');
+
+        if (target.classList.contains('hidden')) {
+          target.classList.remove('hidden');
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          target.classList.add('hidden');
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

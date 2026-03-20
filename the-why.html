@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The WHY — AVA HOUSE</title>
+  <meta name="description" content="Over 60% of young people leaving care experience homelessness or unemployment. AVA House exists to change that — preparing every young person for independence with real skills and real outcomes.">
+  <meta name="keywords" content="NDIS, SIL, supported independent living, youth care, Queensland, Brisbane, community access, life skills, Pacific Islander, multicultural">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The WHY — AVA HOUSE">
+  <meta property="og:description" content="Over 60% of young people leaving care experience homelessness or unemployment. AVA House exists to change that.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.avahouse.com.au/the-why.html">
+  <meta property="og:image" content="https://www.avahouse.com.au/public/logo.png">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'forest': '#1A5632',
+            'forest-deep': '#0E3B22',
+            'gold': '#C5A028',
+            'gold-light': '#F5E6B8',
+            'cream': '#FAF8F0',
+            'dark': '#1A1A1A',
+          },
+          fontFamily: {
+            'heading': ['"DM Serif Display"', 'serif'],
+            'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1A1A1A;
+      background-color: #FAF8F0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Serif Display', serif;
+    }
+    .nav-shadow {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s ease;
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="/" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Home</a>
+
+          <!-- About Us Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-forest font-semibold border-b-2 border-gold flex items-center gap-1">
+              About Us
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Our Story</a>
+              <a href="the-why.html" class="block px-4 py-2.5 text-forest font-semibold bg-cream">The Why</a>
+            </div>
+          </div>
+
+          <a href="our-approach.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Our Approach</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              Services &amp; Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Youth Programs</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Contact Us</a>
+
+          <!-- CTA Button -->
+          <a href="referral.html" class="ml-4 inline-flex items-center px-5 py-2.5 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+            Make a Referral
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <svg id="hamburger-open" class="w-7 h-7 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="hamburger-close" class="w-7 h-7 text-forest hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Home</a>
+
+        <!-- Mobile About Us Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-forest font-semibold rounded-lg bg-cream transition-colors" data-target="mobile-about">
+            About Us
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-about" class="hidden pl-4 space-y-1">
+            <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Our Story</a>
+            <a href="the-why.html" class="block px-4 py-2.5 text-forest font-semibold rounded-lg bg-cream">The Why</a>
+          </div>
+        </div>
+
+        <a href="our-approach.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Our Approach</a>
+
+        <!-- Mobile Services Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-services">
+            Services &amp; Programs
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services" class="hidden pl-4 space-y-1">
+            <a href="youth-programs.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Youth Programs</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Contact Us</a>
+
+        <div class="pt-2">
+          <a href="referral.html" class="block text-center px-5 py-3 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors">
+            Make a Referral
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO STAT SECTION                            -->
+  <!-- ============================================ -->
+  <section class="bg-cream py-20 md:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- The big stat -->
+      <p class="text-8xl sm:text-9xl font-heading text-gold leading-none">60%</p>
+      <p class="mt-6 text-xl sm:text-2xl text-dark leading-relaxed max-w-2xl mx-auto">
+        of young people leaving care experience homelessness or unemployment within two years
+      </p>
+
+      <!-- Divider -->
+      <div class="mt-12 mb-12 flex items-center justify-center gap-4">
+        <div class="h-px w-16 bg-gold/40"></div>
+        <div class="w-2 h-2 rounded-full bg-gold"></div>
+        <div class="h-px w-16 bg-gold/40"></div>
+      </div>
+
+      <!-- Mission paragraphs -->
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
+        <p>
+          Across Queensland, over 60% of young people leaving care experience homelessness or unemployment within two years. Many programs focus only on accommodation, leaving young people without the tools they need for adult life.
+        </p>
+        <p>
+          Our WHY is simple: we believe every young person deserves the opportunity to thrive. That means leaving AVA House with a job or training, housing readiness, a driver's licence, financial literacy, and the confidence to stand independently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- OUTCOMES SECTION                             -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl text-forest">What Independence Looks Like</h2>
+        <p class="mt-4 text-lg text-gray-600">Every young person leaving AVA House should have:</p>
+      </div>
+
+      <div class="space-y-5 max-w-xl mx-auto">
+        <!-- Outcome 1 -->
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gold-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-dark">A job or training pathway</h3>
+            <p class="text-gray-600 mt-1">Employment readiness, resume skills, and active placement support.</p>
+          </div>
+        </div>
+
+        <!-- Outcome 2 -->
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gold-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-dark">Housing readiness</h3>
+            <p class="text-gray-600 mt-1">Understanding tenancy, budgeting for rent, and maintaining a home.</p>
+          </div>
+        </div>
+
+        <!-- Outcome 3 -->
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gold-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-dark">A driver's licence</h3>
+            <p class="text-gray-600 mt-1">Learner hours, licence preparation, and practical driving support.</p>
+          </div>
+        </div>
+
+        <!-- Outcome 4 -->
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gold-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-dark">Financial literacy</h3>
+            <p class="text-gray-600 mt-1">Saving, spending wisely, understanding bills, and building financial confidence.</p>
+          </div>
+        </div>
+
+        <!-- Outcome 5 -->
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gold-light rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-dark">The confidence to stand independently</h3>
+            <p class="text-gray-600 mt-1">Self-belief, resilience, and the knowledge that they are not alone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA BANNER SECTION                           -->
+  <!-- ============================================ -->
+  <section class="bg-forest py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl text-white">Ready to make a referral?</h2>
+      <p class="mt-4 text-lg text-green-100/90">
+        We're here to support young people on their journey to independence.
+      </p>
+      <div class="mt-8">
+        <a href="referral.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-lg text-lg">
+          Make a Referral
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-forest-deep text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <!-- Left Column -->
+        <div>
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-green-200/80 text-sm mt-4">
+            &copy; 2025 A4 Solutions All rights reserved.
+          </p>
+        </div>
+
+        <!-- Middle Column: Menu Links -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">Our Story</a></li>
+            <li><a href="the-why.html" class="text-green-200/80 hover:text-gold transition-colors">Our Why</a></li>
+            <li><a href="our-approach.html" class="text-green-200/80 hover:text-gold transition-colors">Our Approach</a></li>
+            <li><a href="services.html" class="text-green-200/80 hover:text-gold transition-colors">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Contact Us</h4>
+          <ul class="space-y-2.5">
+            <li><a href="referral.html" class="text-gold hover:text-yellow-300 font-semibold transition-colors">Make a Referral</a></li>
+            <li><a href="contact.html" class="text-green-200/80 hover:text-gold transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-green-200/60">
+        <div class="flex gap-4">
+          <a href="terms.html" class="hover:text-gold transition-colors">Website Terms</a>
+          <span>|</span>
+          <a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        </div>
+        <p>Brisbane, Queensland, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Sticky nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('nav-shadow');
+      } else {
+        navbar.classList.remove('nav-shadow');
+      }
+    });
+
+    // Mobile hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerOpen = document.getElementById('hamburger-open');
+    const hamburgerClose = document.getElementById('hamburger-close');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerOpen.classList.remove('hidden');
+        hamburgerClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerOpen.classList.add('hidden');
+        hamburgerClose.classList.remove('hidden');
+      }
+    });
+
+    // Mobile dropdown accordions
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        const arrow = button.querySelector('svg');
+
+        if (target.classList.contains('hidden')) {
+          target.classList.remove('hidden');
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          target.classList.add('hidden');
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Programs — AVA HOUSE</title>
+  <meta name="description" content="AVA House youth programs for ages 14–18: residential care, education pathways, housing readiness, driver's licence, life skills, and cultural & pastoral care in Queensland.">
+  <meta name="keywords" content="youth programs, NDIS, residential care, education pathways, housing readiness, life skills, Queensland, Brisbane, cultural care">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Youth Programs — AVA HOUSE">
+  <meta property="og:description" content="Programs designed to prepare young people aged 14–18 for adulthood. Residential care, education, housing readiness, and life skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.avahouse.com.au/youth-programs.html">
+  <meta property="og:image" content="https://www.avahouse.com.au/public/logo.png">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'forest': '#1A5632',
+            'forest-deep': '#0E3B22',
+            'gold': '#C5A028',
+            'gold-light': '#F5E6B8',
+            'cream': '#FAF8F0',
+            'dark': '#1A1A1A',
+          },
+          fontFamily: {
+            'heading': ['"DM Serif Display"', 'serif'],
+            'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1A1A1A;
+      background-color: #FAF8F0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Serif Display', serif;
+    }
+    .nav-shadow {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s ease;
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .service-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    .pillar-item {
+      transition: transform 0.2s ease;
+    }
+    .pillar-item:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="/" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Home</a>
+
+          <!-- About Us Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors flex items-center gap-1">
+              About Us
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">Our Story</a>
+              <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:bg-cream hover:text-forest transition-colors">The Why</a>
+            </div>
+          </div>
+
+          <a href="our-approach.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Our Approach</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown relative">
+            <button class="px-4 py-2 text-forest font-semibold border-b-2 border-gold transition-colors flex items-center gap-1">
+              Services &amp; Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+              <a href="youth-programs.html" class="block px-4 py-2.5 text-forest font-semibold bg-cream">Youth Programs</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-4 py-2 text-dark hover:text-forest font-medium transition-colors">Contact Us</a>
+
+          <!-- CTA Button -->
+          <a href="referral.html" class="ml-4 inline-flex items-center px-5 py-2.5 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+            Make a Referral
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <svg id="hamburger-open" class="w-7 h-7 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="hamburger-close" class="w-7 h-7 text-forest hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-4 space-y-1">
+        <a href="/" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Home</a>
+
+        <!-- Mobile About Us Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors" data-target="mobile-about">
+            About Us
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-about" class="hidden pl-4 space-y-1">
+            <a href="our-story.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">Our Story</a>
+            <a href="the-why.html" class="block px-4 py-2.5 text-dark hover:text-forest rounded-lg hover:bg-cream transition-colors">The Why</a>
+          </div>
+        </div>
+
+        <a href="our-approach.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Our Approach</a>
+
+        <!-- Mobile Services Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-3 text-forest font-semibold rounded-lg bg-cream" data-target="mobile-services">
+            Services &amp; Programs
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services" class="hidden pl-4 space-y-1">
+            <a href="youth-programs.html" class="block px-4 py-2.5 text-forest font-semibold rounded-lg bg-cream">Youth Programs</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="block px-4 py-3 text-dark hover:text-forest font-medium rounded-lg hover:bg-cream transition-colors">Contact Us</a>
+
+        <div class="pt-2">
+          <a href="referral.html" class="block text-center px-5 py-3 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors">
+            Make a Referral
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION                                 -->
+  <!-- ============================================ -->
+  <section class="bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading text-gold leading-tight">
+          Youth Programs
+        </h1>
+        <p class="mt-6 text-xl sm:text-2xl text-gray-700 leading-relaxed">
+          Our programs are designed to prepare young people aged 14&ndash;18 for adulthood.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PROGRAM BENEFITS — 6 CARDS                   -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Card 1: Residential Care -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Residential Care</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Safe and nurturing environment with trauma-informed staff.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+        <!-- Card 2: Education & Employment Pathways -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Education &amp; Employment Pathways</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Tutoring, TAFE access, apprenticeships, and local employer partnerships.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+        <!-- Card 3: Housing Readiness -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Housing Readiness</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Tenancy training, bond savings, and rental support.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+        <!-- Card 4: Driver's Licence Program -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Driver's Licence Program</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            From learners through to provisional licences.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+        <!-- Card 5: Life Skills Training -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1a1.5 1.5 0 010-2.12l.88-.88a1.5 1.5 0 012.12 0l2.1 2.1 5.1-5.1a1.5 1.5 0 012.12 0l.88.88a1.5 1.5 0 010 2.12l-7.98 7.98a1.5 1.5 0 01-2.12 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Life Skills Training</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Cooking, cleaning, financial literacy, communication.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+        <!-- Card 6: Cultural & Pastoral Care -->
+        <div class="service-card bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
+          <div class="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-forest mb-3">Cultural &amp; Pastoral Care</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Faith and cultural programs to strengthen identity and resilience.
+          </p>
+          <a href="contact.html" class="text-gold hover:text-yellow-600 font-semibold transition-colors">
+            Read more &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CUSTOMISATION BANNER                         -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-20 bg-gold-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl text-forest">Program can be customised</h2>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+        Can be designed to suit the need of the children and young people being supported with a FEE FOR Service Model available.
+      </p>
+      <div class="mt-8">
+        <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-forest-deep hover:bg-forest text-white font-semibold rounded-lg transition-colors shadow-sm text-lg">
+          Contact us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM CTA BANNER                            -->
+  <!-- ============================================ -->
+  <section class="bg-forest py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl text-white">Ready to make a referral?</h2>
+      <p class="mt-4 text-lg text-green-100/90">
+        We're here to support young people on their journey to independence.
+      </p>
+      <div class="mt-8">
+        <a href="referral.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors shadow-lg text-lg">
+          Make a Referral
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-forest-deep text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <!-- Left Column -->
+        <div>
+          <img src="/public/logo.png" alt="AVA HOUSE" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-green-200/80 text-sm mt-4">
+            &copy; 2025 A4 Solutions All rights reserved.
+          </p>
+        </div>
+
+        <!-- Middle Column: Menu Links -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="our-story.html" class="text-green-200/80 hover:text-gold transition-colors">Our Story</a></li>
+            <li><a href="the-why.html" class="text-green-200/80 hover:text-gold transition-colors">Our Why</a></li>
+            <li><a href="our-approach.html" class="text-green-200/80 hover:text-gold transition-colors">Our Approach</a></li>
+            <li><a href="services.html" class="text-green-200/80 hover:text-gold transition-colors">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact -->
+        <div>
+          <h4 class="text-lg font-heading mb-4">Contact Us</h4>
+          <ul class="space-y-2.5">
+            <li><a href="referral.html" class="text-gold hover:text-yellow-300 font-semibold transition-colors">Make a Referral</a></li>
+            <li><a href="contact.html" class="text-green-200/80 hover:text-gold transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-green-200/60">
+        <div class="flex gap-4">
+          <a href="terms.html" class="hover:text-gold transition-colors">Website Terms</a>
+          <span>|</span>
+          <a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        </div>
+        <p>Brisbane, Queensland, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Sticky nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('nav-shadow');
+      } else {
+        navbar.classList.remove('nav-shadow');
+      }
+    });
+
+    // Mobile hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerOpen = document.getElementById('hamburger-open');
+    const hamburgerClose = document.getElementById('hamburger-close');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerOpen.classList.remove('hidden');
+        hamburgerClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerOpen.classList.add('hidden');
+        hamburgerClose.classList.remove('hidden');
+      }
+    });
+
+    // Mobile dropdown accordions
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        const arrow = button.querySelector('svg');
+
+        if (target.classList.contains('hidden')) {
+          target.classList.remove('hidden');
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          target.classList.add('hidden');
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
